@@ -1,0 +1,15 @@
+{
+  "name": "WEBD6201-W2021-ICE3",
+  "version": "0.0.1",
+  "description": "In class Exercise 3 for WEBD6201",
+  "main": "index.html",
+  "repository": "https://github.com/CKM206/CKM206-WEBD6201-W2021-ICE3.git",
+  "author": "Calvin May <calvinkylemay@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "@popperjs/core": "^2.6.0",
+    "bootstrap": "^5.0.0-beta1",
+    "jquery": "^3.5.1"
+  }
+}
