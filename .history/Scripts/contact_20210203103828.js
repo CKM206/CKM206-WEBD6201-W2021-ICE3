@@ -3,7 +3,10 @@
 
 ((core) =>
 {
-  class Contact {
+
+
+})(core || (core={}));
+class Contact {
     // getters and setters
     get FullName() 
     {
@@ -107,7 +110,3 @@
       this.EmailAddress = propertyArray[2];
     }
   }
-
-  core.Contact = Contact;
-
-})(core || (core={}));

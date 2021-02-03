@@ -143,7 +143,7 @@
         {
           let contactData = localStorage.getItem((index + 1).toString());
 
-          let contact = new core.Contact();
+          let contact = new Core.Contact();
           contact.deserialize(contactData);
 
           data += `<tr>

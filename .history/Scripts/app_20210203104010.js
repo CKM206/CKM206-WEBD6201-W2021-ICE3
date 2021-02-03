@@ -121,7 +121,7 @@
         sendButton.addEventListener("click", function(event){
             //event.preventDefault();
             
-            let contact = new core.Contact(fullName.value, contactNumber.value, emailAddress.value);
+            let contact = new Core.Contact(fullName.value, contactNumber.value, emailAddress.value);
 
             if(contact.serialize())
             {
@@ -143,7 +143,7 @@
         {
           let contactData = localStorage.getItem((index + 1).toString());
 
-          let contact = new core.Contact();
+          let contact = new Contact();
           contact.deserialize(contactData);
 
           data += `<tr>
