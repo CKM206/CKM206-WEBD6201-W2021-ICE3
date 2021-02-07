@@ -128,33 +128,12 @@
           <td>${contact.FullName}</td>
           <td>${contact.ContactNumber}</td>
           <td>${contact.EmailAddress}</td>
-          <td class="text-center">
-            <button value="${index + 1}" 
-                    class="btn btn-primary btn-sm edit"><i class="fas fa-edit fa-sm"> Edit</i></button>
-          </td>
-          <td class="text-center">
-            <button value="${index + 1}" 
-                    class="btn btn-danger btn-sm delete"><i class="fas fa-trash-alt fa-sm"> Delete</i></button>
-          </td>
+          <td><button class="btn btn-primary fa-sm"><i class="fas fa-edit"> Edit</i></button></td>
+          <td><button class="btn btn-danger"><i class="fas fa-trash-alt"> Delete</i></button></td>
         </tr>`;
       }
+
       contactList.innerHTML = data;
-
-      //TODO - Need to finish Edit Functionality
-      $("button.edit").on("click", function()
-      {
-        console.log($(this).val());
-      });
-
-      //TODO - Need to fix Delete Functionality - Breaks when deleting any item that isnt the last
-      $("button.delete").on("click", function()
-      {
-        if (confirm("Are you sure you want to delete this?"))
-        {
-        localStorage.removeItem($(this).val());
-        location.href  ="contact-list.html";
-        }
-      });
     }
   }
 

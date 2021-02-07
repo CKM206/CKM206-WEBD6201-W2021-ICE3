@@ -146,14 +146,11 @@
         console.log($(this).val());
       });
 
-      //TODO - Need to fix Delete Functionality - Breaks when deleting any item that isnt the last
+      //TODO - Need to fix Delete Functionality
       $("button.delete").on("click", function()
       {
-        if (confirm("Are you sure you want to delete this?"))
-        {
         localStorage.removeItem($(this).val());
         location.href  ="contact-list.html";
-        }
       });
     }
   }

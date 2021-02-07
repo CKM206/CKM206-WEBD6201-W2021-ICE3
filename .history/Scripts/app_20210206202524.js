@@ -140,20 +140,14 @@
       }
       contactList.innerHTML = data;
 
-      //TODO - Need to finish Edit Functionality
       $("button.edit").on("click", function()
       {
         console.log($(this).val());
       });
 
-      //TODO - Need to fix Delete Functionality - Breaks when deleting any item that isnt the last
       $("button.delete").on("click", function()
       {
-        if (confirm("Are you sure you want to delete this?"))
-        {
         localStorage.removeItem($(this).val());
-        location.href  ="contact-list.html";
-        }
       });
     }
   }
