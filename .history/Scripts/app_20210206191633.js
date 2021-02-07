@@ -85,14 +85,14 @@
         {
           $(this).trigger("focus").trigger("select");
 
-          messageArea.addClass("alert alert-danger")
+          $("#messageArea").addClass("alert alert-danger")
                            .text("Please enter an appropriate Name")
                            .show();
 
         } 
         else 
         {
-          messageArea.removeAttr("class").hide();
+          $("#messageArea").removeAttr("class").hide();
         }
       });
 

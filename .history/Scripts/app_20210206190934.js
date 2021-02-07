@@ -74,25 +74,24 @@
 
     function displayContact() {
 
-      let messageArea = $("#messageArea").hide();
+      $("#messageArea").hide();
 
-      
       // Form Validation using JQuery
-      $("#fullName").on("blur", function() 
+      $("#fullName").on("blur", () => 
       {
-        console.log($(this).val());
-        if ($(this).val().length < 2) 
+        if ($("#fullName").val().length < 2) 
         {
-          $(this).trigger("focus").trigger("select");
+          $("#fullName").trigger("focus").trigger("select");
 
-          messageArea.addClass("alert alert-danger")
+          $("#messageArea").addClass("alert alert-danger")
                            .text("Please enter an appropriate Name")
                            .show();
 
         } 
         else 
         {
-          messageArea.removeAttr("class").hide();
+          $("#messageArea").removeAttr("class")
+                           .hide();
         }
       });
 
