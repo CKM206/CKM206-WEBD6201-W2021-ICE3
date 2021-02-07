@@ -99,7 +99,7 @@
       $("#sendButton").on("click", () => 
       {
 
-        if ($("#subscribeCheckBox")[0].checked)
+        if ($("#subscribeCheckBox").checked == true)
         {
           let contact = new core.Contact(fullName.value, contactNumber.value, emailAddress.value);
 

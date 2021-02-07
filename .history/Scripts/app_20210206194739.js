@@ -95,20 +95,19 @@
           messageArea.removeAttr("class").hide();
         }
       });
+      
+      $("#subscribeCheckbox").on("checked", function(){
+        console.log("Checkbox Checked!");
+      })
 
       $("#sendButton").on("click", () => 
       {
+        // let contact = new core.Contact(fullName.value, contactNumber.value, emailAddress.value);
 
-        if ($("#subscribeCheckBox")[0].checked)
-        {
-          let contact = new core.Contact(fullName.value, contactNumber.value, emailAddress.value);
-
-          if (contact.serialize()) 
-          {
-            localStorage.setItem((localStorage.length + 1).toString(), contact.serialize());
-          }
-       }
-      });
+        // if (contact.serialize()) {
+        //   localStorage.setItem((localStorage.length + 1).toString(), contact.serialize());
+        // }
+      })
     }
 
   function displayContactList() {

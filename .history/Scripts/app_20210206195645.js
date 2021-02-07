@@ -99,15 +99,15 @@
       $("#sendButton").on("click", () => 
       {
 
-        if ($("#subscribeCheckBox")[0].checked)
+        if ($("#subscribeCheckBox").checked)
         {
-          let contact = new core.Contact(fullName.value, contactNumber.value, emailAddress.value);
+        let contact = new core.Contact(fullName.value, contactNumber.value, emailAddress.value);
 
-          if (contact.serialize()) 
-          {
-            localStorage.setItem((localStorage.length + 1).toString(), contact.serialize());
-          }
-       }
+        if (contact.serialize()) 
+        {
+          localStorage.setItem((localStorage.length + 1).toString(), contact.serialize());
+        }
+      }
       });
     }
 

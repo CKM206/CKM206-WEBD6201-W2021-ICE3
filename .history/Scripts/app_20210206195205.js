@@ -96,20 +96,21 @@
         }
       });
 
+      let checkBox = $("#subscribeCheckBox").on("change", function(){
+        console.log("CheckBox Checked!");
+      })
+
       $("#sendButton").on("click", () => 
       {
+        let contact = new core.Contact(fullName.value, contactNumber.value, emailAddress.value);
 
-        if ($("#subscribeCheckBox")[0].checked)
-        {
-          let contact = new core.Contact(fullName.value, contactNumber.value, emailAddress.value);
-
-          if (contact.serialize()) 
-          {
-            localStorage.setItem((localStorage.length + 1).toString(), contact.serialize());
-          }
-       }
-      });
+        if (contact.serialize()) {
+          localStorage.setItem((localStorage.length + 1).toString(), contact.serialize());
+        }
+      })
     }
+
+    console.log(checkBox);
 
   function displayContactList() {
     if (localStorage.length > 0) {
